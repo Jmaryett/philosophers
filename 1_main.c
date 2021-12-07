@@ -13,7 +13,7 @@ static int	init_all(int ac, char **av, t_all *all)
 {
 	if (ft_atoi(av[1]) <= 0)
 	{
-		errors("Number of philosophers must be more than 0!\n", all);
+		errors("Error: Number of philosophers must be more than 0!\n", all);
 		return (0);
 	}
 	else
@@ -49,13 +49,7 @@ int	main(int ac, char **av)
 	}
 	if (!init_all(ac - 1, av, &all))
 		return (-1);
-	if (all.nb_of_philos == 0)
-	{
-		errors("Error: troubles with malloc!\n", &all);
-		return (-1);
-	}
 	starting_to_work(&all);
-	printf("Going to free all\n");
 	free_all(&all);
 	return (0);
 }

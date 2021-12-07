@@ -40,7 +40,7 @@ void	observer(t_all *all)
 
 void	creating_threads(t_all *all)
 {
-	int	i = 0;
+	int			i = 0;
 	pthread_t	philo_thread;
 
 	while (i < all->nb_of_philos)
