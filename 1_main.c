@@ -4,7 +4,7 @@ void	starting_to_work(t_all *all)
 {
 	pthread_mutex_init(&all->right_to_write, NULL);
 	set_philos(all);
-	all->start_time = get_starting_time();
+	//all->start_time = get_starting_time();
 	creating_threads(all);
 	return ;
 }

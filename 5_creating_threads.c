@@ -22,9 +22,8 @@ void	observer(t_all *all)
 		all_philos = 0;
 		while(i < all->nb_of_philos)
 		{
-			if (all->philos[i].eaten_meals >= all->nb_should_eat) {
+			if (all->philos[i].eaten_meals >= all->nb_should_eat)
 				all_philos++;
-			}
 			if (!dead_or_alive(i, all))
 				return ;
 			i++;
@@ -43,8 +42,11 @@ void	creating_threads(t_all *all)
 	int			i = 0;
 	pthread_t	philo_thread;
 
+	all->start_time = get_starting_time();
 	while (i < all->nb_of_philos)
 	{
+		/* if (all->philos->number % 2 == 0)
+			ft_usleep(all->time_to_eat / 10, all->start_time); */
 		if (pthread_create(&philo_thread, NULL, eat_sleep_think, (void*)(all->philos + i)))
 		{
 			pthread_mutex_lock(&all->right_to_write);

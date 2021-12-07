@@ -44,6 +44,9 @@ void	*eat_sleep_think(void *arg)
 {
 	t_philos	*philo = (t_philos*)arg;
 
+	//not sure if it needed here
+	philo->time_to_die = get_current_time(philo->all->start_time)
+						+ philo->all->time_to_die;
 	while (1)
 	{
 		take_forks(philo);

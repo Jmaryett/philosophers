@@ -15,6 +15,7 @@ long	get_current_time(long start_time)
 	struct timeval	start;
 	time_t			current_time;
 
+	current_time = 0;
 	gettimeofday(&start, NULL);
 	current_time = start.tv_sec * 1000 + start.tv_usec / 1000;
 	return(current_time - start_time); 

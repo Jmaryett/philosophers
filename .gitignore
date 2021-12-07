@@ -1,4 +1,5 @@
 *.o
 .DS-Store
 /Eat-sleep-die/
-philosophers.zip
+./philosophers.zip
+./Philosophers/
