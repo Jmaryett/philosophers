@@ -1,6 +1,6 @@
 #include "philos.h"
 
-static void	assign_forks(int i, t_all *all)
+void	assign_forks(int i, t_all *all)
 {
 	if (i == all->nb_of_philos - 1)
 	{

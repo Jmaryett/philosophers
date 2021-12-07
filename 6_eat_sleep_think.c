@@ -18,6 +18,8 @@ void	eating(t_philos *philo)
 	printf("%ld\t%d philosopher is eating\n", get_current_time(philo->all->start_time), philo->number);
 	pthread_mutex_unlock(philo->right_to_write);
 	ft_usleep(philo->all->time_to_eat, philo->all->start_time);
+	philo->time_to_die = get_current_time(philo->all->start_time)
+		+ philo->all->time_to_die;
 	philo->eaten_meals++;
 	pthread_mutex_unlock(philo->first_fork);
 	pthread_mutex_unlock(philo->second_fork);

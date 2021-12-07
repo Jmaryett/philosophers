@@ -45,6 +45,6 @@ int	init_time_and_nb_of_meals(int ac, char **input, t_all *all)
 		all->nb_should_eat = ft_atoi(input[3]);
 	}
 	else
-		all->nb_should_eat = -1;
+		all->nb_should_eat = INT_MAX;
 	return (1);
 }
