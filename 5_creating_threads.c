@@ -33,7 +33,7 @@ void	observer(t_all *all)
 			pthread_mutex_lock(&all->right_to_write);
 			return ;
 		}
-		usleep(100);
+		usleep(500);
 	}
 }
 
@@ -45,8 +45,6 @@ void	creating_threads(t_all *all)
 	all->start_time = get_starting_time();
 	while (i < all->nb_of_philos)
 	{
-		/* if (all->philos->number % 2 == 0)
-			ft_usleep(all->time_to_eat / 10, all->start_time); */
 		if (pthread_create(&philo_thread, NULL, eat_sleep_think, (void*)(all->philos + i)))
 		{
 			pthread_mutex_lock(&all->right_to_write);

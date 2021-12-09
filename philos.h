@@ -15,9 +15,6 @@
 
 typedef struct s_all	t_all;
 
-//i think i could use right_to_wright only in all struct, because i have
-//a pointer to all in t_philos anyway
-
 typedef struct	s_philos
 {
 	int				eaten_meals;
