@@ -33,7 +33,7 @@ void	observer(t_all *all)
 			pthread_mutex_lock(&all->right_to_write);
 			return ;
 		}
-		usleep(500);
+		usleep(100);
 	}
 }
 

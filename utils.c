@@ -47,7 +47,7 @@ void	ft_usleep(time_t milisec, long start_time)
 	start = get_current_time(start_time);
 	while (start < stop)
 	{
-		usleep(10);
+		usleep(25);
 		start = get_current_time(start_time);
 	}
 }
