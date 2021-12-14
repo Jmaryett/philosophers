@@ -1,0 +1,7 @@
+*.o
+.DS-Store
+/Eat-sleep-die/
+/philosophers.zip
+/Philosophers/
+/Philosophers-42Project-Tester/
+/philos/

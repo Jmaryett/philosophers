@@ -1,0 +1,14 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory `/Users/jmaryett/Desktop/philosophers'
+gcc -Wall -Wextra -Werror -g 1_main.c -c -o 1_main.o
+gcc -Wall -Wextra -Werror -g 2_check_valid.c -c -o 2_check_valid.o
+gcc -Wall -Wextra -Werror -g 3_init_input.c -c -o 3_init_input.o
+gcc -Wall -Wextra -Werror -g 4_set_philos.c -c -o 4_set_philos.o
+gcc -Wall -Wextra -Werror -g 5_creating_threads.c -c -o 5_creating_threads.o
+gcc -Wall -Wextra -Werror -g 6_eat_sleep_think.c -c -o 6_eat_sleep_think.o
+gcc -Wall -Wextra -Werror -g 7_get_time.c -c -o 7_get_time.o
+gcc -Wall -Wextra -Werror -g errors.c -c -o errors.o
+gcc -Wall -Wextra -Werror -g utils.c -c -o utils.o
+gcc -g -o philo ./1_main.o ./2_check_valid.o ./3_init_input.o ./4_set_philos.o ./5_creating_threads.o ./6_eat_sleep_think.o ./7_get_time.o ./errors.o ./utils.o
+make: Leaving directory `/Users/jmaryett/Desktop/philosophers'
+ 
